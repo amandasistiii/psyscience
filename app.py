@@ -32,4 +32,5 @@ def video(condition, part):
     return render_template('video_viewer.html', video_file=video_file)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Explicitly bind the app to 0.0.0.0 and port 5000 for Render deployment
+    app.run(debug=True, host="0.0.0.0", port=5000)
